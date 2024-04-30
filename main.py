@@ -37,7 +37,7 @@ def advanced_game(number_of_players, bullet):
     else:
       turn = players_names.index(player)
     player = players_names[turn]
-    choice = int(input(f"It\'s {player}\'s turn to choose a number: "))
+    choice = int(input(f"\nIt\'s {player}\'s turn to choose a number: "))
     if choice not in players_and_choices.values():
       players_and_choices[player] = choice
       if choice == bullet:
