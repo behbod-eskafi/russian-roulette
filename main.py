@@ -37,17 +37,21 @@ def advanced_game(number_of_players, bullet):
     else:
       turn = players_names.index(player)
     player = players_names[turn]
-    choice = int(input(f"It\'s {player}\'s turn to choose a number: "))
-    if choice not in players_and_choices.values():
+    choice = int(input(f"\nIt\'s {player}\'s turn to choose a number: "))
+    if choice > number_of_players:
+      print("\n**Invalid number**")
+      print(f"Please choose a number between 1 and {all_players}\n")
+      change_player = False
+    if choice not in players_and_choices.values() and choice <= number_of_players:
       players_and_choices[player] = choice
       if choice == bullet:
         print(f"\n***{player} just died.***")
         break
-      print(f"\n*{player} is safe.\n*")
+      print(f"\n*{player} is safe.*")
       number_of_players -= 1 
       players_names.remove(player)
       change_player = True
-    else:
+    elif choice in players_and_choices.values() and choice < number_of_players:
       print('\n**Invalid.**')
       print(f"It was {list(players_and_choices.keys())[list(players_and_choices.values()).index(choice)]}\'s choosen number.\nTRY AGAIN.\n")
       change_player = False
