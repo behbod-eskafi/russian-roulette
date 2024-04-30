@@ -52,7 +52,8 @@ def advanced_game(number_of_players, bullet):
       print(f"It was {list(players_and_choices.keys())[list(players_and_choices.values()).index(choice)]}\'s choosen number.\nTRY AGAIN.\n")
       change_player = False
 
-game = int(input("WHICH GAME WOULD YOU LIKE TO PLAY?\n 1.Classic Game\n 2.Advanced Game\nplease enter the number: "))
+game = int(input("\nWHICH GAME WOULD YOU LIKE TO PLAY?\n 1.Classic Game\n 2.Advanced Game\nplease enter the number: "))
+print()
 if game == 1:
  classic_game(number_of_players,bullet)
 else:
