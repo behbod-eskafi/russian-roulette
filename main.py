@@ -9,7 +9,9 @@ bullet = random.randint(1, players)
 person = 0
 while True:
   if bullet == person:
-    print(f"Palyer number {person}: you lost!")
+    print(f"Player number {person}: you lost!")
     break
+  if person > 0:
+    print(f"Player {person} is safe!")
   person = int(input("Your number: "))
   continue
