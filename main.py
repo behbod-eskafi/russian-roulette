@@ -12,10 +12,10 @@ def classic_game(number_of_players, bullet):
   person = 0
   while True:
     if bullet == person:
-      print(f"***Player with number {person} just died!***")
+      print(f"***Player number {person} just died!***")
       break
     if person > 0:
-      print(f"*Player with number {person} is safe!*")
+      print(f"*Player number {person} is safe!*")
     person = int(input("Your number: "))
     continue
 
